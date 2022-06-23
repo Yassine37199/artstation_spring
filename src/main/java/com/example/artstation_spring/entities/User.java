@@ -31,6 +31,10 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "imageLink")
+    private String userProfileImageLink;
+
+
     @NotBlank(message = "headline is required")
     @Column(name = "headline")
     private String headline;
@@ -50,7 +54,83 @@ public class User {
     @Column(name = "website")
     private String website;
 
+    public long getUserId() {
+        return userId;
+    }
 
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
+    public String getFullname() {
+        return fullname;
+    }
 
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserProfileImageLink() {
+        return userProfileImageLink;
+    }
+
+    public void setUserProfileImageLink(String userProfileImageLink) {
+        this.userProfileImageLink = userProfileImageLink;
+    }
+
+    public String getHeadline() {
+        return headline;
+    }
+
+    public void setHeadline(String headline) {
+        this.headline = headline;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
 }
