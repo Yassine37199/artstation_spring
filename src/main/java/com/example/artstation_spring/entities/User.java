@@ -3,6 +3,7 @@ package com.example.artstation_spring.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 @Entity
 public class User {
@@ -31,9 +32,14 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "imageLink")
-    private String userProfileImageLink;
+    @Column(name = "AvatarImageLink")
+    private String AvatarImageLink;
 
+    @Column(name = "CoverImageLink")
+    private String CoverImageLink;
+
+    @Column(name = "DemoReelLink")
+    private String DemoReelLink;
 
     @NotBlank(message = "headline is required")
     @Column(name = "headline")
@@ -51,8 +57,40 @@ public class User {
     @Column(name = "country")
     private String country;
 
-    @Column(name = "website")
-    private String website;
+    @Column(name = "createdAt")
+    private Date createdAt;
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getAvatarImageLink() {
+        return AvatarImageLink;
+    }
+
+    public void setAvatarImageLink(String avatarImageLink) {
+        AvatarImageLink = avatarImageLink;
+    }
+
+    public String getCoverImageLink() {
+        return CoverImageLink;
+    }
+
+    public void setCoverImageLink(String coverImageLink) {
+        CoverImageLink = coverImageLink;
+    }
+
+    public String getDemoReelLink() {
+        return DemoReelLink;
+    }
+
+    public void setDemoReelLink(String demoReelLink) {
+        DemoReelLink = demoReelLink;
+    }
 
     public long getUserId() {
         return userId;
@@ -86,13 +124,6 @@ public class User {
         this.password = password;
     }
 
-    public String getUserProfileImageLink() {
-        return userProfileImageLink;
-    }
-
-    public void setUserProfileImageLink(String userProfileImageLink) {
-        this.userProfileImageLink = userProfileImageLink;
-    }
 
     public String getHeadline() {
         return headline;
@@ -126,11 +157,4 @@ public class User {
         this.country = country;
     }
 
-    public String getWebsite() {
-        return website;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
 }

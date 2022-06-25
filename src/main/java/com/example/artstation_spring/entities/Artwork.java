@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Entity
 public class Artwork {
@@ -26,13 +27,17 @@ public class Artwork {
     @Column(name = "title")
     private String title;
 
-    @NotBlank(message = "image is required")
-    @Column(name = "imageLink")
-    private String artworkImageLink;
+    @Column(name = "artworkImageLinks")
+    @ElementCollection
+    private List<String> artworkImageLinks;
 
-    @NotBlank(message = "details is required")
-    @Column(name = "details")
-    private String details;
+    @NotBlank(message = "image is required")
+    @Column(name = "projectThumbnailLink")
+    private String projectThumbnailLink;
+
+    @NotBlank(message = "description is required")
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "hasMatureContent")
     private boolean hasMatureContent;
@@ -53,28 +58,36 @@ public class Artwork {
         this.title = title;
     }
 
-    public String getArtworkImageLink() {
-        return artworkImageLink;
-    }
-
-    public void setArtworkImageLink(String artworkImageLink) {
-        this.artworkImageLink = artworkImageLink;
-    }
-
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
     public boolean isHasMatureContent() {
         return hasMatureContent;
     }
 
     public void setHasMatureContent(boolean hasMatureContent) {
         this.hasMatureContent = hasMatureContent;
+    }
+
+    public List<String> getArtworkImageLinks() {
+        return artworkImageLinks;
+    }
+
+    public void setArtworkImageLinks(List<String> artworkImageLinks) {
+        this.artworkImageLinks = artworkImageLinks;
+    }
+
+    public String getProjectThumbnailLink() {
+        return projectThumbnailLink;
+    }
+
+    public void setProjectThumbnailLink(String projectThumbnailLink) {
+        this.projectThumbnailLink = projectThumbnailLink;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
