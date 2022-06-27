@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .header {
+        @apply fixed w-screen h-12
+                bg-gray-800 flex
+                items-center
+                p-7
+                
+    }
+
+    .logo {
+        @apply w-[130px]
+    }
+
+    .search-form {
+        @apply w-[764px] h-[31px]
+         border-white
+         mx-5
+    }
+
+    .search-form-input {
+        @apply w-full h-full bg-gray-600 appearance-none
+                text-white focus:outline-none p-4
+                rounded-md
+                
+    }
+
+    .user-nav {
+        @apply flex items-center justify-between
+                w-[400px]
+    }
+
+    .upload-nav {
+        @apply flex items-center justify-center
+                text-white
+    }
+
+    .upload-nav span {
+        @apply mx-2
+    }
+
+
+}
