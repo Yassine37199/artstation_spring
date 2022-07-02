@@ -9,6 +9,11 @@
                 bg-gray-800 flex
                 items-center
                 p-7
+                font-sans
+                text-sm
+                leading-4
+                font-semibold
+
                 
     }
 
@@ -37,11 +42,28 @@
     .upload-nav {
         @apply flex items-center justify-center
                 text-white
+                cursor-pointer
     }
 
     .upload-nav span {
         @apply mx-2
     }
+
+    .notification-icon {
+        @apply relative
+    }
+
+    .notification {
+        @apply p-[1.5px]
+        text-[11px]
+        text-white
+        absolute
+        bg-red-600
+        rounded-lg
+        top-[-8px]
+        left-3    }
+
+    
 
 
 }

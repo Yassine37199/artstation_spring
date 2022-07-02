@@ -2,6 +2,7 @@ import React from 'react';
 import {BiBell , BiMessage, BiHeart , BiCart, BiUpload} from 'react-icons/bi'
 
 import logo from '../Assets/artstation-logo-white.png';
+import userImage from '../Assets/user-image.png'
 import './header.styles.css';
 
 const Header = () => {
@@ -18,10 +19,16 @@ const Header = () => {
                     <BiUpload size={20} color="#fff" />
                     <span className='nav-link-text'>UPLOAD</span>
                 </div>
-                <BiBell size={20} color='#fff' />
+                <div className='notification-icon' >
+                    <BiBell  size={20} color='#fff' />
+                    <div className='notification'>112</div>
+                </div> 
                 <BiMessage size={20} color='#fff' />
                 <BiHeart size={20} color='#fff' />
                 <BiCart size={20} color='#fff'/>
+                <div className='user-profile-image'>
+                    <img className='user-image' src={userImage} />
+                </div>
             </div>
         </div>
     );

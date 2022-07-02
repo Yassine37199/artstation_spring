@@ -19,6 +19,9 @@ module.exports = {
             200 : '#F1F1F1',
             100 : '#FFF'
         }
+      },
+      fontFamily : {
+        'sans' : ['"Open Sans"' , '"Helvetica Neue"' , '"Helvetica"' , '"Arial"' , 'ui-sans-serif']
       }
     },
   },
