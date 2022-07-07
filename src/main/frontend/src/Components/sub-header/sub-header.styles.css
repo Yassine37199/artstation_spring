@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .sub-header {
+        @apply sticky w-screen h-12
+                bg-gray-900
+                flex items-center justify-center
+                font-sans text-xs leading-4 uppercase text-white
+    }
+
+    .sub-nav-item {
+        @apply flex items-center justify-center
+               p-4 mx-3
+               hover:bg-gray-600 hover:cursor-pointer 
+    }
+
+    .sub-nav-icon {
+        @apply text-white
+                mr-2
+
+    }
+
+
+
+
+}

@@ -6,6 +6,8 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -28,19 +30,22 @@ public class Artwork {
     private String title;
 
     @Column(name = "artworkImageLinks")
-    @ElementCollection
-    private List<String> artworkImageLinks;
+    private String artworkImageLinks;
 
     @NotBlank(message = "image is required")
     @Column(name = "projectThumbnailLink")
     private String projectThumbnailLink;
 
+
     @NotBlank(message = "description is required")
-    @Column(name = "description")
+    @Column(columnDefinition = "LONGTEXT" )
     private String description;
 
     @Column(name = "hasMatureContent")
     private boolean hasMatureContent;
+
+    @Column(name = "creation_date")
+    private LocalDate creation_date;
 
     public long getArtworkId() {
         return artworkId;
@@ -66,11 +71,11 @@ public class Artwork {
         this.hasMatureContent = hasMatureContent;
     }
 
-    public List<String> getArtworkImageLinks() {
+    public String getArtworkImageLinks() {
         return artworkImageLinks;
     }
 
-    public void setArtworkImageLinks(List<String> artworkImageLinks) {
+    public void setArtworkImageLinks(String artworkImageLinks) {
         this.artworkImageLinks = artworkImageLinks;
     }
 
@@ -88,6 +93,14 @@ public class Artwork {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public LocalDate getCreation_date() {
+        return creation_date;
+    }
+
+    public void setCreation_date(LocalDate creation_date) {
+        this.creation_date = LocalDate.now();
     }
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

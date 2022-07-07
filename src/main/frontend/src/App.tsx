@@ -1,10 +1,13 @@
 import './App.css';
-import Header from './Components/header.component';
+import Header from './Components/header/header.component';
+import { SubHeader } from './Components/sub-header/sub-header.component';
 
 function App() {
+  console.log(process.env)
   return (
-    <div className="App">
+    <div className="App flex flex-col">
       <Header />
+      <SubHeader />
     </div>
   );
 }
