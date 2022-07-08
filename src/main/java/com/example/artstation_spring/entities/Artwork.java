@@ -36,9 +36,9 @@ public class Artwork {
     @Column(name = "projectThumbnailLink")
     private String projectThumbnailLink;
 
-
-    @NotBlank(message = "description is required")
-    @Column(columnDefinition = "LONGTEXT" )
+    
+    @Column(
+            columnDefinition = "LONGTEXT" )
     private String description;
 
     @Column(name = "hasMatureContent")

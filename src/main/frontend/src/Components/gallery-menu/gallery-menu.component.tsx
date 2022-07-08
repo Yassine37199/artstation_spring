@@ -1,9 +1,26 @@
-import React from 'react';
+import axios from 'axios';
+import useAxios from 'axios-hooks';
+import { Artwork } from '../../Models/artwork';
+import { GalleryItem } from '../gallery-item/gallery-item.component';
+
+import './gallery-menu.styles.css';
 
 const GalleryMenu = () => {
+
+    const [{data , loading , error} , refresh] = useAxios(`${process.env.REACT_APP_API_URL}/artwork/list`)
+
+    if(loading) return <p>Loading ...</p>
+    if(error) return <p>Error !!</p>
+
+    console.log(data)
+
     return (
-        <div>
-            
+        <div className='gallery-menu'>
+        {
+            data.map((artwork : any) => (
+                <GalleryItem key={artwork.artworkId} artwork={artwork} />
+            ))
+        }
         </div>
     );
 };

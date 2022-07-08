@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+        .gallery-item-info {
+            @apply h-[260px] 
+                    flex items-end
+                    p-6
+                    font-sans
+                    transition-opacity
+                    opacity-0
+                    bg-gradient-to-b from-transparent to-gray-800 
+                   
+        }
+
+
+
+        .gallery-item-profile {
+            @apply h-10 rounded-full mx-4
+        }
+
+        .gallery-item-title {
+           @apply text-lg leading-5 font-extralight text-white
+        }
+
+        .gallery-item-artist {
+            @apply font-light text-sm leading-5 text-white
+        }
+
+        .gallery-item-image {
+            @apply h-[260px] bg-cover bg-top hover:cursor-pointer
+        }
+
+
+
+}

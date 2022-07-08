@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+        .gallery-menu {
+            @apply grid overflow-hidden grid-cols-5 grid-rows-3 gap-1
+        }
+
+
+
+}
