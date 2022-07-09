@@ -36,7 +36,7 @@ public class Artwork {
     @Column(name = "projectThumbnailLink")
     private String projectThumbnailLink;
 
-    
+
     @Column(
             columnDefinition = "LONGTEXT" )
     private String description;

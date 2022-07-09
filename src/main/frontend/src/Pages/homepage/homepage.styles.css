@@ -5,7 +5,7 @@
 @layer components {
 
         .homepage {
-            @apply bg-gray-800 overflow-y-hidden
+            @apply bg-gray-800 overflow-y-hidden h-screen
         }
 
 
