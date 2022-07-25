@@ -4,6 +4,14 @@
 
 @layer components {
 
+        .main-form {
+            @apply h-full w-3/4 pr-5 outline-red-600 outline-dashed
+        }
+
+        .side-form {
+            @apply h-full w-1/4 ml-3 outline-blue-600 outline-dashed
+        }
+
         .new-artwork-page {
             @apply bg-gray-800 overflow-y-hidden min-h-[900px]
                     font-sans
@@ -14,17 +22,12 @@
             @apply text-white text-[32px] leading-8 font-thin
         }
 
-        .new-artwork-form {
+        .new-artwork-container {
             @apply flex h-[700px] w-full 
         }
 
-        .main-form {
-            @apply h-full w-3/4
-        }
+    
 
-        .side-form {
-            @apply h-full w-1/4
-        }
 
 
 }

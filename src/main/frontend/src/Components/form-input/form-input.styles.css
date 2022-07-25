@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .form-group {
+        @apply pt-8 text-white
+    }
+
+    .form-label-container {
+        @apply bg-gray-600 py-2 px-3 text-lg
+    }
+
+    .form-input-container {
+        @apply bg-gray-700 p-5
+    }
+
+    .form-input {
+        @apply bg-gray-800 
+                block w-full px-3 py-2 
+                text-base
+                focus:outline-none
+                focus:outline-gray-500 
+                focus:outline-offset-0
+    }
+}

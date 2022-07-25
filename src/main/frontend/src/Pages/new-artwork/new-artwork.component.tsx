@@ -1,3 +1,4 @@
+import FormInput from '../../Components/form-input/form-input.component';
 import './new-artwork.styles.css'
 
 const NewArtwork = () => {
@@ -6,10 +7,11 @@ const NewArtwork = () => {
             <h2 className='new-artwork-title'>Untitled</h2>
             <div className='new-artwork-container'>
             <div className='main-form '>
-                <div className='artwork-title-form'>
-                    <label className='artwork-title-input-label'>Artwork Title</label>
-                    <input className='artwork-title-input block' type='text' placeholder='what is your artwork called ?' />
-                </div>
+               <FormInput 
+                type='text' 
+                name='title' 
+                label='Artwork Title'
+                placeholder = 'What is your artwork called ?'  />
             </div>
             <div className='side-form'>
 
